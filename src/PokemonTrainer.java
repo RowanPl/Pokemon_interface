@@ -2,10 +2,11 @@ import java.util.List;
 
 public class PokemonTrainer{
     private String name;
-    private List<Pokemon> Pokemon;
+    private List<Pokemon> pokemons;
 
-    public PokemonTrainer(String userA, List<Pokemon> pokemons) {
+    public PokemonTrainer(String userA, List<Pokemon> Pokemons) {
         this.name = userA;
+        this.pokemons = Pokemons;
     }
 
     public String getName() {
@@ -13,6 +14,6 @@ public class PokemonTrainer{
     }
 
     public List<Pokemon> getPokemons() {
-        return Pokemon;
+        return pokemons;
     }
 }

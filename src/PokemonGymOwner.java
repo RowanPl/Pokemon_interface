@@ -8,6 +8,7 @@ public class PokemonGymOwner extends PokemonTrainer {
         super(name, pokemons);
         this.gymOwner = name;
         this.town = city;
+        this.Pokemon = pokemons;
     }
 
 

@@ -21,12 +21,14 @@ public class FirePokemon extends Pokemon {
                 System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                 gymPokemon.setHp(getHp() - damage);
                 System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                break;
 
             case ("water"): {
                 Math.round(damage);
                 System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                 gymPokemon.setHp(getHp() - damage);
                 System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                break;
             }
             case ("electric"): {
                 damage = (damage / 100 * 75);
@@ -34,6 +36,7 @@ public class FirePokemon extends Pokemon {
                 System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                 gymPokemon.setHp(getHp() - damage);
                 System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                break;
             }
             case ("fire"): {
                 damage = (damage / 100 * 50);
@@ -41,6 +44,7 @@ public class FirePokemon extends Pokemon {
                 System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                 gymPokemon.setHp(getHp() - damage);
                 System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                break;
             }
         }
     }
@@ -56,12 +60,14 @@ public class FirePokemon extends Pokemon {
                 System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                 gymPokemon.setHp(getHp() - damage);
                 System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                break;
 
             case ("water"): {
                 Math.round(damage);
                 System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                 gymPokemon.setHp(getHp() - damage);
                 System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                break;
             }
             case ("electric"): {
                 damage = (damage / 100 * 75);
@@ -69,6 +75,7 @@ public class FirePokemon extends Pokemon {
                 System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                 gymPokemon.setHp(getHp() - damage);
                 System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                break;
             }
             case ("fire"): {
                 damage = (damage / 100 * 50);
@@ -76,6 +83,7 @@ public class FirePokemon extends Pokemon {
                 System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                 gymPokemon.setHp(getHp() - damage);
                 System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                break;
             }
         }
     }
@@ -91,12 +99,14 @@ public class FirePokemon extends Pokemon {
                     System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                     gymPokemon.setHp(getHp() - damage);
                     System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                    break;
 
                 case ("water"): {
                     Math.round(damage);
                     System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                     gymPokemon.setHp(getHp() - damage);
                     System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                    break;
                 }
                 case ("electric"): {
                     damage = (damage / 100 * 75);
@@ -104,6 +114,7 @@ public class FirePokemon extends Pokemon {
                     System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                     gymPokemon.setHp(getHp() - damage);
                     System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                    break;
                 }
                 case ("fire"): {
                     damage = (damage / 100 * 50);
@@ -111,6 +122,7 @@ public class FirePokemon extends Pokemon {
                     System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                     gymPokemon.setHp(getHp() - damage);
                     System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                    break;
                 }
             }
         }
@@ -126,12 +138,14 @@ public class FirePokemon extends Pokemon {
                     System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                     gymPokemon.setHp(getHp() - damage);
                     System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                    break;
 
                 case ("water"): {
                     Math.round(damage);
                     System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                     gymPokemon.setHp(getHp() - damage);
                     System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                    break;
                 }
                 case ("electric"): {
                     damage = (damage / 100 * 75);
@@ -139,6 +153,7 @@ public class FirePokemon extends Pokemon {
                     System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                     gymPokemon.setHp(getHp() - damage);
                     System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                    break;
                 }
                 case ("fire"): {
                     damage = (damage / 100 * 50);
@@ -146,6 +161,7 @@ public class FirePokemon extends Pokemon {
                     System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
                     gymPokemon.setHp(getHp() - damage);
                     System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                    break;
                 }
             }
         }
