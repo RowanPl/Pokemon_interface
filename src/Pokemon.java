@@ -25,8 +25,8 @@ public abstract class Pokemon {
         return hp;
     }
 
-    public void setHp(int hp) {
-        this.hp = hp;
+    public void setHp(int healthPoints) {
+      this.hp = healthPoints;
     }
 
     public String getType() {

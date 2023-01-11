@@ -3,12 +3,15 @@ import java.util.List;
 public class PokemonGymOwner extends PokemonTrainer {
     private String town;
     private String gymOwner;
-    private List<Pokemon> Pokemon;
+    private List<Pokemon> gymPokemon;
+    private int Hp;
     public PokemonGymOwner(String name, String city, List<Pokemon> pokemons) {
         super(name, pokemons);
         this.gymOwner = name;
         this.town = city;
-        this.Pokemon = pokemons;
+        this.gymPokemon = pokemons;
+
+
     }
 
 
@@ -21,6 +24,6 @@ public class PokemonGymOwner extends PokemonTrainer {
         return town;
     }
     public List<Pokemon> getPokemons() {
-        return Pokemon;
+        return gymPokemon;
     }
 }

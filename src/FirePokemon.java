@@ -1,177 +1,159 @@
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 
 public class FirePokemon extends Pokemon {
-    List<String> attacks = Arrays.asList("inferno", "pyroBall", "fireLash", "flameThrower");
+     private final List<String> attacks = Arrays.asList("fireLash", "flameThrower", "pyroBall", "inferno");
+
 
     public FirePokemon(String name, int level, int healthPoints, String food, String sound) {
         super(name, level, healthPoints, food, sound, "fire");
+
     }
+    boolean isPlayer = true;
+    @Override
+    public List<String> getAttacks() {
+        return attacks;
+    }
+    public void trainerPokemon(Pokemon pokemon, Pokemon enemy, int damage) {
 
-    public void inferno(Pokemon pokemon, Pokemon gymPokemon) {
-        System.out.println(pokemon.getName() + " attacks " + gymPokemon.getName() + " with inferno.");
+        System.out.println(damage);
 
-        int damage = (int) Math.random() * (50 - 30);
-        switch (gymPokemon.getType()) {
+        int temp = enemy.getHp();
 
-            case ("grass"):
-                damage = (damage / 100 * 150);
-                Math.round(damage);
-                System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                gymPokemon.setHp(getHp() - damage);
-                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+        switch (enemy.getType()) {
+            case ("grass"): {
+
+                temp = (int) (damage * 1.5);
+                Math.round(temp);
+                System.out.println(enemy.getName() + " loses " + temp + "hp.");
+                enemy.setHp(enemy.getHp() - temp);
+                System.out.println(enemy.getName() + " has " + enemy.getHp() + "hp left");
                 break;
-
+            }
             case ("water"): {
-                Math.round(damage);
-                System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                gymPokemon.setHp(getHp() - damage);
-                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                temp = (int) (damage * 1.1);
+                Math.round(temp);
+                System.out.println(enemy.getName() + " loses " + temp + "hp.");
+                enemy.setHp(enemy.getHp() - temp);
+                System.out.println(enemy.getName() + " has " + enemy.getHp() + "hp left");
                 break;
             }
             case ("electric"): {
-                damage = (damage / 100 * 75);
-                Math.round(damage);
-                System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                gymPokemon.setHp(getHp() - damage);
-                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                temp = (int) (damage * 0.8);
+                Math.round(temp);
+                System.out.println(enemy.getName() + " loses " + temp + "hp.");
+                enemy.setHp(enemy.getHp() - temp);
+                System.out.println(enemy.getName() + " has " + enemy.getHp() + "hp left");
                 break;
             }
             case ("fire"): {
-                damage = (damage / 100 * 50);
-                Math.round(damage);
-                System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                gymPokemon.setHp(getHp() - damage);
-                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                temp = (int) (damage * 0.5);
+                Math.round(temp);
+                System.out.println(enemy.getName() + " loses " + temp + "hp.");
+                enemy.setHp(enemy.getHp() - temp);
+                System.out.println(enemy.getName() + " has " + enemy.getHp() + "hp left");
                 break;
             }
         }
     }
 
-    public void flameThrower(Pokemon pokemon, Pokemon gymPokemon) {
-        System.out.println(pokemon.getName() + " attacks " + gymPokemon.getName() + " with flamethrower.");
-        int damage = (int) Math.random() * (40 - 25);
-        switch (gymPokemon.getType()) {
+    public void enemyPokemon(Pokemon pokemon, Pokemon enemy, int damage) {
 
-            case ("grass"):
-                damage = (damage / 100 * 150);
-                Math.round(damage);
-                System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                gymPokemon.setHp(getHp() - damage);
-                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+
+        System.out.println(damage);
+
+        int temp = pokemon.getHp();
+
+        switch (pokemon.getType()) {
+            case ("grass"): {
+                temp = (int) (damage * 1.5);
+                Math.round(temp);
+                System.out.println(pokemon.getName() + " loses " + temp + "hp.");
+                pokemon.setHp(pokemon.getHp() - temp);
+                System.out.println(pokemon.getName() + " has " + pokemon.getHp() + "hp left");
                 break;
-
+            }
             case ("water"): {
-                Math.round(damage);
-                System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                gymPokemon.setHp(getHp() - damage);
-                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                temp = (int) (damage * 1.1);
+                Math.round(temp);
+                System.out.println(pokemon.getName() + " loses " + temp + "hp.");
+                pokemon.setHp(pokemon.getHp() - temp);
+                System.out.println(pokemon.getName() + " has " + pokemon.getHp() + "hp left");
                 break;
             }
             case ("electric"): {
-                damage = (damage / 100 * 75);
-                Math.round(damage);
-                System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                gymPokemon.setHp(getHp() - damage);
-                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                temp = (int) (damage * 0.8);
+                Math.round(temp);
+                System.out.println(pokemon.getName() + " loses " + temp + "hp.");
+                pokemon.setHp(pokemon.getHp() - temp);
+                System.out.println(pokemon.getName() + " has " + pokemon.getHp() + "hp left");
                 break;
             }
             case ("fire"): {
-                damage = (damage / 100 * 50);
-                Math.round(damage);
-                System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                gymPokemon.setHp(getHp() - damage);
-                System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
+                temp = (int) (damage * 0.5);
+                Math.round(temp);
+                System.out.println(pokemon.getName() + " loses " + temp + "hp.");
+                pokemon.setHp(pokemon.getHp() - temp);
+                System.out.println(pokemon.getName() + " has " + pokemon.getHp() + "hp left");
                 break;
             }
         }
     }
 
-        public void fireLash(Pokemon pokemon, Pokemon gymPokemon){
-            System.out.println(pokemon.getName() + " attacks " + gymPokemon.getName() + " with firelash.");
-            int damage = (int) Math.random() * (60 - 10);
-            switch (gymPokemon.getType()) {
+    public void fireLash(Pokemon pokemon, Pokemon enemy) {
+        int damage = (int) (Math.random() * (50 - 30) + 30);
 
-                case ("grass"):
-                    damage = (damage / 100 * 150);
-                    Math.round(damage);
-                    System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                    gymPokemon.setHp(getHp() - damage);
-                    System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
-                    break;
-
-                case ("water"): {
-                    Math.round(damage);
-                    System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                    gymPokemon.setHp(getHp() - damage);
-                    System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
-                    break;
-                }
-                case ("electric"): {
-                    damage = (damage / 100 * 75);
-                    Math.round(damage);
-                    System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                    gymPokemon.setHp(getHp() - damage);
-                    System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
-                    break;
-                }
-                case ("fire"): {
-                    damage = (damage / 100 * 50);
-                    Math.round(damage);
-                    System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                    gymPokemon.setHp(getHp() - damage);
-                    System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
-                    break;
-                }
-            }
+        if (isPlayer) {
+            System.out.println(pokemon.getName() + " attacks " + enemy.getName() + " with firelash.");
+            trainerPokemon(pokemon, enemy, damage);
+            isPlayer = false;
+        } else {
+            System.out.println(enemy.getName() + " attacks " + pokemon.getName() + " with firelash.");
+            enemyPokemon(enemy, pokemon, damage);
+            isPlayer = true;
         }
-
-        public void pyroBall(Pokemon pokemon, Pokemon gymPokemon){
-            System.out.println(pokemon.getName() + " attacks " + gymPokemon.getName() + " with pyroball.");
-            int damage = (int) Math.random() * (30 - 25);
-            switch (gymPokemon.getType()) {
-
-                case ("grass"):
-                    damage = (damage / 100 * 150);
-                    Math.round(damage);
-                    System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                    gymPokemon.setHp(getHp() - damage);
-                    System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
-                    break;
-
-                case ("water"): {
-                    Math.round(damage);
-                    System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                    gymPokemon.setHp(getHp() - damage);
-                    System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
-                    break;
-                }
-                case ("electric"): {
-                    damage = (damage / 100 * 75);
-                    Math.round(damage);
-                    System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                    gymPokemon.setHp(getHp() - damage);
-                    System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
-                    break;
-                }
-                case ("fire"): {
-                    damage = (damage / 100 * 50);
-                    Math.round(damage);
-                    System.out.println(gymPokemon.getName() + " loses " + damage + "hp");
-                    gymPokemon.setHp(getHp() - damage);
-                    System.out.println(gymPokemon.getName() + " has " + gymPokemon.getHp() + "hp left");
-                    break;
-                }
-            }
-        }
-
-        @Override
-        public List<String> getAttacks () {
-            return attacks;
-        }
-
-
-
-
     }
+
+    public void flameThrower(Pokemon pokemon, Pokemon enemy) {
+        int damage = (int) (Math.random() * (80 - 10) + 10);
+
+        if (isPlayer) {
+            System.out.println(pokemon.getName() + " attacks " + enemy.getName() + " with flamethrower.");
+            trainerPokemon(pokemon, enemy, damage);
+            isPlayer = false;
+        } else {
+            System.out.println(enemy.getName() + " attacks " + pokemon.getName() + " with flamethrower.");
+            enemyPokemon(enemy, pokemon, damage);
+            isPlayer = true;
+        }
+    }
+
+
+    public void pyroBall(Pokemon pokemon, Pokemon enemy) {
+        int damage = (int) (Math.random() * (80 - 10) + 10);
+
+        if (isPlayer) {
+            System.out.println(pokemon.getName() + " attacks " + enemy.getName() + " with pyroball.");
+            trainerPokemon(pokemon, enemy, damage);
+            isPlayer = false;
+        } else {
+            System.out.println(enemy.getName() + " attacks " + pokemon.getName() + " with pyroball.");
+            enemyPokemon(enemy, pokemon, damage);
+            isPlayer = true;
+        }
+    }
+    public void inferno(Pokemon pokemon, Pokemon enemy) {
+        int damage = (int) (Math.random() * (30 - 20) + 20);
+
+        if (isPlayer) {
+            System.out.println(pokemon.getName() + " attacks " + enemy.getName() + " with inferno.");
+            trainerPokemon(pokemon, enemy, damage);
+            isPlayer = false;
+        } else {
+            System.out.println(enemy.getName() + " attacks " + pokemon.getName() + " with inferno.");
+            enemyPokemon(enemy, pokemon, damage);
+            isPlayer = true;
+
+        }
+    }
+}

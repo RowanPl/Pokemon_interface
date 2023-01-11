@@ -4,15 +4,15 @@ import java.util.*;
 public class PokemonGymImpl implements PokemonGym {
 
 
-    List<Pokemon> pokemons;
+    List<Pokemon> gymPokemon;
 
     public PokemonGymImpl(List<Pokemon> pokemons) {
-        this.pokemons = pokemons;
+        this.gymPokemon = pokemons;
     }
 
     @Override
     public void enteredTheGym(PokemonTrainer player1) {
-        PokemonGymOwner gymOwner = new PokemonGymOwner("Brock", "Pewter City", pokemons);
+        PokemonGymOwner gymOwner = new PokemonGymOwner("Brock", "Pewter City", gymPokemon);
         System.out.println("You have entered the " + gymOwner.getTown() + " gym");
         System.out.println("In front of you stands a pokemontrainer");
         System.out.println(Main.ANSI_RED + gymOwner.getName() + Main.ANSI_RESET +": Hello stranger, I'm " + gymOwner.getName() + ", the owner of this gym. Who are you?");
