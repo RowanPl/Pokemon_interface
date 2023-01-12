@@ -57,9 +57,6 @@ public class GrassPokemon extends Pokemon {
 
     public void enemyPokemon(Pokemon pokemon, Pokemon enemy, int damage) {
 
-
-        System.out.println(damage);
-
         int temp = pokemon.getHp();
 
         switch (pokemon.getType()) {

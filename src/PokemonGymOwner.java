@@ -14,8 +14,6 @@ public class PokemonGymOwner extends PokemonTrainer {
 
     }
 
-
-
     public String getName() {
         return gymOwner;
     }

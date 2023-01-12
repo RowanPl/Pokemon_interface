@@ -16,8 +16,6 @@ public class FirePokemon extends Pokemon {
     }
     public void trainerPokemon(Pokemon pokemon, Pokemon enemy, int damage) {
 
-        System.out.println(damage);
-
         int temp = enemy.getHp();
 
         switch (enemy.getType()) {
@@ -58,9 +56,6 @@ public class FirePokemon extends Pokemon {
     }
 
     public void enemyPokemon(Pokemon pokemon, Pokemon enemy, int damage) {
-
-
-        System.out.println(damage);
 
         int temp = pokemon.getHp();
 

@@ -18,8 +18,6 @@ public class WaterPokemon extends Pokemon {
     boolean isPlayer = true;
     public void trainerPokemon(Pokemon pokemon, Pokemon enemy, int damage) {
 
-        System.out.println(damage);
-
         int temp = enemy.getHp();
 
         switch (enemy.getType()) {
@@ -60,9 +58,6 @@ public class WaterPokemon extends Pokemon {
     }
 
     public void enemyPokemon(Pokemon pokemon, Pokemon enemy, int damage) {
-
-
-        System.out.println(damage);
 
         int temp = pokemon.getHp();
 
